@@ -9,6 +9,7 @@ Di dalamnya tersedia **4 endpoint** percobaan:
 2. **`/generate-from-image`** – menghasilkan teks/konten dari gambar.
 3. **`/generate-from-document`** – menghasilkan teks/konten dari dokumen.
 4. **`/generate-from-audio`** – menghasilkan teks/konten dari audio.
+5. **`/api/chat`** – mengirim dan menerima pesan chat secara interaktif dengan Gemini API.
 
 ## Tujuan
 Menyediakan contoh implementasi sederhana untuk memanggil berbagai layanan
@@ -33,6 +34,11 @@ npm install
 ```
 
 ### 3. Konfigurasi Environment
+#### Salin contoh file environment 
+```bash
+cp .env.example .env
+```
+#### Buka file .env dan isi nilai GEMINI_API_KEY dengan API key
 ```bash
 GEMINI_API_KEY=masukkan_api_key_anda
 ```
@@ -41,3 +47,12 @@ GEMINI_API_KEY=masukkan_api_key_anda
 ```bash
 node index.js
 ```
+
+### 5. Akses Endpoint
+| Endpoint             | Url                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| generate text | http://localhost:3000/generate-text |
+| generate from image | http://localhost:3000/generate-from-image |
+| generate from document | http://localhost:3000/generate-from-document |
+| generate from audio | http://localhost:3000/generate-from-audio |
+| chat | http://localhost:3000/api/chat |
